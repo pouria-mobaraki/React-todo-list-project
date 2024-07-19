@@ -116,6 +116,9 @@ form input,
 
 .todo-item {
   padding: 0rem 1.2rem;
+  background-color: #fff;
+  min-width: 60%;
+  /* margin-bottom: 10px; */
 }
 
 .fa-trash,

@@ -35,6 +35,13 @@ export default class TodoList extends Component {
         title:this.state.todoTitle,
         completed :false
      }
+     this.setState(prevState =>{
+        return {
+            todos:[...prevState.todos,newTodoObject],
+            todoTitle:''
+        }
+     })
+      
     }
 
     render() {
@@ -58,8 +65,10 @@ export default class TodoList extends Component {
 
                 <div className="todo-container">
                     <ul className="todo-list">
-                        
-                            <Todo />
+                        {this.state.todos.map(todo=>(
+                          <Todo {...todo}  />
+                        ))}
+                           
                        
                         
                      
